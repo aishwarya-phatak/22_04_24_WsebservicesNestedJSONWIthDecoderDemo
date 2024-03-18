@@ -30,8 +30,8 @@ struct Product : Decodable{
     init(from decoder: Decoder) throws {
         let mainContainerOfProduct = try! decoder.container(keyedBy: ProductKeys.self)
         
-        self.id = try! mainContainerOfProduct.decode(Int.self, forKey: .id)
-        self.title = try! mainContainerOfProduct.decode(String.self, forKey: .title)
+        self.productId = try! mainContainerOfProduct.decode(Int.self, forKey: .productId)
+        self.productName = try! mainContainerOfProduct.decode(String.self, forKey: .productName)
         self.description = try! mainContainerOfProduct.decode(String.self, forKey: .description)
         self.price = try! mainContainerOfProduct.decode(Double.self, forKey: .price)
         
