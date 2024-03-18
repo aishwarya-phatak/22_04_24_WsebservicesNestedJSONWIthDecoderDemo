@@ -7,16 +7,16 @@
 
 import Foundation
 struct Product : Decodable{
-    var id : Int
-    var title : String
+    var productId : Int
+    var productName : String
     var price : Double
     var description : String
     var rate : Double
     var count : Int
     
     enum ProductKeys : String, CodingKey{
-        case id
-        case title
+        case productId = "id"
+        case productName = "title"
         case price
         case description
         case rating
